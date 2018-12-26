@@ -23,7 +23,7 @@ jobs:
           command: npm run build
       - run:
           name: install gh-pages
-          command: npm install -g gh-pages
+          command: sudo npm install -g gh-pages
       - run:
           name: deploy pages
           command: gh-pages -d public -r https://github.com/ian-zy/ian-zy.github.io.git -b master -u "${GH_USER} ${GH_EMAIL}"
