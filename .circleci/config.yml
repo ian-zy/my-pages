@@ -1,0 +1,29 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/my-pages
+    docker:
+      - image: circleci/node:10.14
+    steps:
+      - checkout
+      - run:
+          name: update-npm
+          command: sudo npm install -g npm
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install dependencies
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: build pages
+          command: npm run build
+      - run:
+          name: install gh-pages
+          command: npm install -g gh-pages
+      - run:
+          name: deploy pages
+          command: gh-pages -d public -r https://github.com/ian-zy/ian-zy.github.io.git -b master -u "${GH_USER} ${GH_EMAIL}"
