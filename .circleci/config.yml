@@ -29,4 +29,4 @@ jobs:
             - "ee:97:90:d2:05:58:d8:40:1c:37:aa:ed:f4:c2:9a:ea"
       - run:
           name: deploy pages
-          command: "gh-pages -d public -r https://github.com/ian-zy/ian-zy.github.io.git -b master -u "${GH_USER} <${GH_EMAIL}>" -m "Publish site from ${CIRCLE_PROJECT_REPONAME} ${CIRCLE_SHA1} b${CIRCLE_BUILD_NUM}\n${CIRCLE_BUILD_URL}"
+          command: gh-pages -d public -r https://github.com/ian-zy/ian-zy.github.io.git -b master -u "${GH_USER} <${GH_EMAIL}>" -m "Publish site from ${CIRCLE_PROJECT_REPONAME} ${CIRCLE_SHA1} b${CIRCLE_BUILD_NUM}\n${CIRCLE_BUILD_URL}"
