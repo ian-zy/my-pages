@@ -20,6 +20,7 @@ const IndexPage = ({ data }) => {
           ))}
         </ul>
       </div>
+      <Link to="/app/">Check out my awesome dynamic app!</Link>
     </Layout>
   )
 }
