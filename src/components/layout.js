@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
         >
           {children}
           <footer>
-            © 2018, <a href="https://github.com/ian-zy" target="_blank" style={{ textDecoration: 'none' }}>{data.site.siteMetadata.author}</a>
+            © 2018, <a href="https://github.com/ian-zy" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>{data.site.siteMetadata.author}</a>
           </footer>
         </div>
       </>
