@@ -12,13 +12,15 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            description
+            author
           }
         }
       }
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title} siteSubtitle={data.site.siteMetadata.description} />
         <div
           style={{
             margin: `0 auto`,
@@ -29,7 +31,7 @@ const Layout = ({ children }) => (
         >
           {children}
           <footer>
-            © 2018, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+            © 2018, <a href="https://github.com/ian-zy" target="_blank" style={{ textDecoration: 'none' }}>{data.site.siteMetadata.author}</a>
           </footer>
         </div>
       </>
