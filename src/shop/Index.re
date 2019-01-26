@@ -23,7 +23,7 @@ let make = _children => {
       <p> {ReasonReact.string(message)} </p>
       <Button text="Click Me" onClick={_event => self.send(Click)} />
       {self.state.show ?
-         <div> {ReasonReact.string("Welcome to the shop!")} </div> :
+         <div> {ReasonReact.string("Welcome to My ReasonReact shop!")} </div> :
          ReasonReact.null}
       <Button text="Toggle" onClick={_event => self.send(Toggle)} />
     </div>;

@@ -25,7 +25,7 @@ function make(_children) {
               var match = self[/* state */1][/* show */1];
               return React.createElement("div", undefined, React.createElement("p", undefined, message), ReasonReact.element(undefined, undefined, Button$MyPages.make("Click Me", (function (_event) {
                                     return Curry._1(self[/* send */3], /* Click */0);
-                                  }), /* array */[])), match ? React.createElement("div", undefined, "Welcome to the shop!") : null, ReasonReact.element(undefined, undefined, Button$MyPages.make("Toggle", (function (_event) {
+                                  }), /* array */[])), match ? React.createElement("div", undefined, "Welcome to My ReasonReact shop!") : null, ReasonReact.element(undefined, undefined, Button$MyPages.make("Toggle", (function (_event) {
                                     return Curry._1(self[/* send */3], /* Toggle */1);
                                   }), /* array */[])));
             }),
